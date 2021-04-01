@@ -9,7 +9,40 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>
+  <body class="no-sidebar is-preload">
+	<div id="page-wrapper">
+
+  			<!-- Header -->
+				<div id="header">
+
+						<nav id="nav">
+							<ul>
+								<li><%= link_to "Home",root_path      %>  </li>
+								<li><%= link_to "Test",pages_test_path      %></li>
+								<li><%= link_to "Users",users_login_path      %></li>
+								<li>  <%= link_to "Right side bar",pages_about_us_path      %> </li>
+							</ul>
+						</nav>
+
+				</div>
+    <%= yield %>
+        			<!-- Footer -->
+				<div id="footer">
+					<div class="container">
+						<div class="row">
+								<!-- Copyright -->
+									<div class="copyright">
+										<ul class="menu">
+											<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+										</ul>
+									</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+    <div>
+
     <%= yield %>
   </body>
 </html>
